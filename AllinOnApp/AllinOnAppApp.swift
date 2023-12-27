@@ -11,7 +11,7 @@ import SwiftUI
 struct AllinOnAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TapBarView()
         }
     }
 }
