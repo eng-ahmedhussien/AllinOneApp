@@ -48,10 +48,11 @@ struct TapBarView: View {
                 
                 CustomTabItem(imageName: "homeIcon", title:"HomeTapBar", tag: 2) {
                     NavigationView {
-                        Text("MainHomeView")
-                            .onAppear {
-                                UITabBar.showTabBar(animated: true)
-                            }
+                        MainHomeView()
+                       // networkingtest()
+//                            .onAppear {
+//                                UITabBar.showTabBar(animated: true)
+//                            }
                     }
                 }
                 
