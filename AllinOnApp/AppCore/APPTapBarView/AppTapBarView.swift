@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TapBarView: View {
-
+    
     @StateObject var appManager = AppManager.shared
     
     init() {
@@ -30,57 +30,55 @@ struct TapBarView: View {
     
     var body: some View {
         TabView(selection: $appManager.selectTap) {
-    
-                    CustomTabItem(imageName: "shopsIcon", title: "shopTapBar", tag: 0) {
-                        NavigationView {
-                            Text("shopTapBar")
-                                .navigationBarWithLogo()
-                                .onAppear {
-                                    UITabBar.showTabBar(animated: true)
-                                }
+            
+            CustomTabItem(imageName: "shopsIcon", title: "shopTapBar", tag: 0) {
+                NavigationView {
+                    Text("shopTapBar")
+                        .navigationBarWithLogo()
+                        .onAppear {
+                            UITabBar.showTabBar(animated: true)
                         }
-                    }
-                
-                CustomTabItem(imageName: "discountIcon", title: "offersTapBar", tag: 1) {
-                    Text("offers")
-                       // .navigationBarWithLogo()
                 }
-                
-                CustomTabItem(imageName: "homeIcon", title:"HomeTapBar", tag: 2) {
-                    NavigationView {
-                        MainHomeView()
-                       // networkingtest()
-//                            .onAppear {
-//                                UITabBar.showTabBar(animated: true)
-//                            }
-                    }
-                }
-                
-                CustomTabItem(imageName: "location", title:"servicesTapBar", tag: 3) {
-                    NavigationView {
-                       Text("MainServicesView")
-                            .navigationBarWithLogo()
-                            .onAppear {
-                                UITabBar.showTabBar(animated: true)
-                            }
-                    }
-                }
-                
-                CustomTabItem(imageName: "profileIcon", title: "cartTapBar", tag: 4) {
-                    NavigationView {
-                        Text("CartPageView")
-                            .navigationBarWithLogo()
-                            .onAppear {
-                                UITabBar.showTabBar(animated: true)
-                            }
-                    }
-                }
-                .badge(5)
             }
+            
+            CustomTabItem(imageName: "discountIcon", title: "offersTapBar", tag: 1) {
+                Text("offers")
+                // .navigationBarWithLogo()
+            }
+            
+            CustomTabItem(imageName: "homeIcon", title:"HomeTapBar", tag: 2) {
+                NavigationView {
+                    // MainHomeView()
+                    networkingtest()
+                        .onAppear {
+                            UITabBar.showTabBar(animated: true)
+                        }
+                }
+            }
+            
+            CustomTabItem(imageName: "location", title:"servicesTapBar", tag: 3) {
+                NavigationView {
+                    Text("MainServicesView")
+                        .navigationBarWithLogo()
+                        .onAppear {
+                            UITabBar.showTabBar(animated: true)
+                        }
+                }
+            }
+            
+            CustomTabItem(imageName: "profileIcon", title: "cartTapBar", tag: 4) {
+                NavigationView {
+                    Text("CartPageView")
+                        .navigationBarWithLogo()
+                        .onAppear {
+                            UITabBar.showTabBar(animated: true)
+                        }
+                }
+            }
+            .badge(5)
+        }
         .accentColor(Color.gray)
         .environment(\.locale, .init(identifier: "ar"))
-            
-
     }
 }
 

@@ -18,7 +18,17 @@ extension TextFieldStyle {
         switch self {
         case .default(borderColor: let borderColor):
             
-            return TextFieldStyleConfig(textColor: .black, placeholderColor: .gray, backgroundColor: .gray.opacity(0.3), errorBackgroundColor: .red, successBackgroundColor: .green, cornerStyle: .ellipse, borderColor: borderColor, borderWidth: 1, disabledForegroundColor: .gray, disabledBackgroundColor: .gray, disableStrokeColor: .clear)
+            return TextFieldStyleConfig(textColor: .black,
+                                        placeholderColor: .gray,
+                                        backgroundColor: .gray.opacity(0.3),
+                                        errorBackgroundColor: .red,
+                                        successBackgroundColor: .green,
+                                        cornerStyle: .ellipse,
+                                        borderColor: borderColor,
+                                        borderWidth: 1,
+                                        disabledForegroundColor: .gray,
+                                        disabledBackgroundColor: .gray,
+                                        disableStrokeColor: .clear)
             
         case .custom(config: let config):
             return config

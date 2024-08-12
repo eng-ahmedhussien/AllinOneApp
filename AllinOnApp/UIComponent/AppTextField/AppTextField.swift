@@ -20,14 +20,19 @@ struct AppTextField<ContentLeading: View, ContentTrailing: View>: View {
     
     @State private var showPassword: Bool = false
     
-    init(data: Binding<TextFieldData>, style: TextFieldStyle = .default(), placeholderText: String, isSecure: Bool = false, validation: ValidationType? = nil, @ViewBuilder leadingView: () -> ContentLeading = { EmptyView() }, @ViewBuilder trailingView: () -> ContentTrailing = { EmptyView() }) {
+    init(data: Binding<TextFieldData>,
+         style: TextFieldStyle = .default(),
+         placeholderText: String,
+         isSecure: Bool = false,
+         validation: ValidationType? = nil,
+         @ViewBuilder leadingView: () -> ContentLeading = { EmptyView() },
+         @ViewBuilder trailingView: () -> ContentTrailing = { EmptyView() }) {
         
         self._data = data
         self.style = style
         self.placeholderText = placeholderText
         self.isSecure = isSecure
         self.validation = validation
-        
         self.leadingView = leadingView()
         self.trailingView = trailingView()
     }
