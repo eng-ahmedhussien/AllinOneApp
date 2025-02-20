@@ -12,7 +12,7 @@ class UserVM : ObservableObject{
     
     private var cancellable = Set<AnyCancellable>()
     @Published var state: ViewState = .loading
-    let userService = UserApiClien()
+    let userService = UserApiClient()
     @Published var users: [Datum] = []
     
 //    init(userService: UserApiProtocol) {
@@ -30,10 +30,20 @@ class UserVM : ObservableObject{
                     self.state = .error(error.localizedDescription)
                 }
             }, receiveValue: {[weak self] data in
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                    
+//                    self?.state = .loading
+//                }
                 guard let usersData = data.data else {return}
                 self?.users = usersData
                 self?.state = .loaded
             }).store(in: &cancellable)
+    }
+    
+    //MARK: async
+    func fetchUsers() async{
+        let users = try? await userService.getUsers()
+        self.users = users?.data ?? []
     }
 }
 

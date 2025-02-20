@@ -25,9 +25,9 @@ struct networkingtest: View {
                 List(userVM.users, id: \.self) { item in
                     Text(item.firstName ?? "")
                 }.listStyle(.plain)
-//                ForEach(users ?? [], id: \.id) { user in
-//                    Text(user.firstName ?? "")
-//                }
+//                    ForEach(users ?? [], id: \.id) { user in
+//                        Text(user.firstName ?? "")
+//                    }
             case .empty:
                 Text("No data available.")
                     .padding()
@@ -37,19 +37,11 @@ struct networkingtest: View {
                     .padding()
             }
         }
-        .onAppear{
+//        .onAppear{
+//            userVM.fetchUsers()
+//        }
+        .task {
             userVM.fetchUsers()
-//            guard let users = userVM.users ,let userdata = users.data  else {return}
-//            self.users = userdata
-           // print(users.data)
-//            networking.getAll()
-//                .receive(on: DispatchQueue.main)
-//                .sink(receiveCompletion: { data in
-//                    
-//                }, receiveValue: { data in
-//                    users = data
-//                }).store(in: &cancellables)
-
         }
         .padding()
     }
