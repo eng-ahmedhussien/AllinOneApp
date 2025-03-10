@@ -37,11 +37,8 @@ struct networkingtest: View {
                     .padding()
             }
         }
-//        .onAppear{
-//            userVM.fetchUsers()
-//        }
         .task {
-            userVM.fetchUsers()
+            await userVM.fetchUsers()
         }
         .padding()
     }

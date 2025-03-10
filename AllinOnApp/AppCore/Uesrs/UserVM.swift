@@ -19,31 +19,22 @@ class UserVM : ObservableObject{
 //        self.userService = userService
 //    }
     
-    func fetchUsers() {
-        userService.getUsers()
-            .receive(on: RunLoop.main)
-            .sink(receiveCompletion: { data in
-                switch data {
-                case .finished:
-                    self.state = .loaded
-                case .failure(let error):
-                    self.state = .error(error.localizedDescription)
-                }
-            }, receiveValue: {[weak self] data in
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//                    
-//                    self?.state = .loading
-//                }
-                guard let usersData = data.data else {return}
-                self?.users = usersData
-                self?.state = .loaded
-            }).store(in: &cancellable)
-    }
     
     //MARK: async
-    func fetchUsers() async{
-        let users = try? await userService.getUsers()
-        self.users = users?.data ?? []
+
+    func fetchUsers() async {
+        do {
+            let users = try await userService.getUsers()
+            
+            DispatchQueue.main.async {
+                self.users = users?.data ?? []
+                self.state = .loaded
+            }
+        } catch {
+            DispatchQueue.main.async {
+                self.state = .error(error.localizedDescription)
+            }
+        }
     }
 }
 

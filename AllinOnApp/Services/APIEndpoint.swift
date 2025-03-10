@@ -16,6 +16,16 @@ protocol APIEndpoint {
     var parameters: Parameters? { get }
 }
 
+extension APIEndpoint {
+    func asURLRequest() throws -> URLRequest {
+        let url = baseURL.appendingPathComponent(path)
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+        headers?.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
+        return request
+    }
+}
+
 enum HTTPMethod: String {
     case get = "GET"
     case post = "POST"
@@ -27,6 +37,11 @@ enum HTTPMethod: String {
 enum APIError: Error {
     case invalidResponse
     case invalidData
+    case invalidURL
+    case requestFailed
+    case custom(statusCode: Int)
+    case decodingFailed
+    case unknown
 }
 
 enum Parameters {
