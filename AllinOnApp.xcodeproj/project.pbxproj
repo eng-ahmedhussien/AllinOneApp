@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B044A732B3C0F16002FEE67 /* AppTapBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B044A722B3C0F16002FEE67 /* AppTapBarView.swift */; };
-		6B044A762B3C0F6C002FEE67 /* UIImage+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B044A752B3C0F6C002FEE67 /* UIImage+Extentions.swift */; };
-		6B044A782B3C0F7D002FEE67 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B044A772B3C0F7D002FEE67 /* UIView+Extensions.swift */; };
-		6B044A7A2B3C0F82002FEE67 /* UITabBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B044A792B3C0F82002FEE67 /* UITabBar+Extensions.swift */; };
 		6B044A7C2B3C1032002FEE67 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B044A7B2B3C1032002FEE67 /* AppManager.swift */; };
 		6B044A7F2B3C137E002FEE67 /* NavigationBarWithLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B044A7E2B3C137E002FEE67 /* NavigationBarWithLogo.swift */; };
 		6B044A832B3C18E1002FEE67 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B044A852B3C18E1002FEE67 /* Localizable.strings */; };
@@ -22,6 +19,8 @@
 		6B706CB02B38383500DAD7A2 /* AllinOnAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B706CAF2B38383500DAD7A2 /* AllinOnAppTests.swift */; };
 		6B706CBA2B38383500DAD7A2 /* AllinOnAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B706CB92B38383500DAD7A2 /* AllinOnAppUITests.swift */; };
 		6B706CBC2B38383500DAD7A2 /* AllinOnAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B706CBB2B38383500DAD7A2 /* AllinOnAppUITestsLaunchTests.swift */; };
+		6BA341C42D7EDC9200584CC0 /* TapViewEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA341C32D7EDC9200584CC0 /* TapViewEnum.swift */; };
+		6BA341C62D7EDE2700584CC0 /* TapItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA341C52D7EDE2700584CC0 /* TapItem.swift */; };
 		6BC774312B93690800375723 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC774302B93690800375723 /* UserModel.swift */; };
 		6BE332CF2B6BA89700CAB181 /* MainHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE332CE2B6BA89700CAB181 /* MainHomeView.swift */; };
 		6BE332D22B6BB01000CAB181 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE332D12B6BB01000CAB181 /* AppTextField.swift */; };
@@ -64,9 +63,6 @@
 
 /* Begin PBXFileReference section */
 		6B044A722B3C0F16002FEE67 /* AppTapBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTapBarView.swift; sourceTree = "<group>"; };
-		6B044A752B3C0F6C002FEE67 /* UIImage+Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extentions.swift"; sourceTree = "<group>"; };
-		6B044A772B3C0F7D002FEE67 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		6B044A792B3C0F82002FEE67 /* UITabBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+Extensions.swift"; sourceTree = "<group>"; };
 		6B044A7B2B3C1032002FEE67 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		6B044A7E2B3C137E002FEE67 /* NavigationBarWithLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarWithLogo.swift; sourceTree = "<group>"; };
 		6B044A842B3C18E1002FEE67 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -82,6 +78,8 @@
 		6B706CB52B38383500DAD7A2 /* AllinOnAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllinOnAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B706CB92B38383500DAD7A2 /* AllinOnAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllinOnAppUITests.swift; sourceTree = "<group>"; };
 		6B706CBB2B38383500DAD7A2 /* AllinOnAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllinOnAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6BA341C32D7EDC9200584CC0 /* TapViewEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapViewEnum.swift; sourceTree = "<group>"; };
+		6BA341C52D7EDE2700584CC0 /* TapItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapItem.swift; sourceTree = "<group>"; };
 		6BC774302B93690800375723 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		6BE332CE2B6BA89700CAB181 /* MainHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeView.swift; sourceTree = "<group>"; };
 		6BE332D12B6BB01000CAB181 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
@@ -143,20 +141,11 @@
 		6B044A712B3C0EEC002FEE67 /* APPTapBarView */ = {
 			isa = PBXGroup;
 			children = (
-				6B044A742B3C0F4D002FEE67 /* Extentions */,
 				6B044A722B3C0F16002FEE67 /* AppTapBarView.swift */,
+				6BA341C32D7EDC9200584CC0 /* TapViewEnum.swift */,
+				6BA341C52D7EDE2700584CC0 /* TapItem.swift */,
 			);
 			path = APPTapBarView;
-			sourceTree = "<group>";
-		};
-		6B044A742B3C0F4D002FEE67 /* Extentions */ = {
-			isa = PBXGroup;
-			children = (
-				6B044A792B3C0F82002FEE67 /* UITabBar+Extensions.swift */,
-				6B044A772B3C0F7D002FEE67 /* UIView+Extensions.swift */,
-				6B044A752B3C0F6C002FEE67 /* UIImage+Extentions.swift */,
-			);
-			path = Extentions;
 			sourceTree = "<group>";
 		};
 		6B044A7D2B3C134B002FEE67 /* NavigationWithLogo */ = {
@@ -488,6 +477,7 @@
 				6BE332D52B6BB0B900CAB181 /* TextFieldData.swift in Sources */,
 				6BE332DE2B6BB24D00CAB181 /* TextFieldValidation.swift in Sources */,
 				6BE332D22B6BB01000CAB181 /* AppTextField.swift in Sources */,
+				6BA341C42D7EDC9200584CC0 /* TapViewEnum.swift in Sources */,
 				6B044A7F2B3C137E002FEE67 /* NavigationBarWithLogo.swift in Sources */,
 				6BE332E52B6BB47000CAB181 /* UserDefaultsHelper.swift in Sources */,
 				6BE69CB02B3C6443007651FA /* UserEndpoints.swift in Sources */,
@@ -495,12 +485,9 @@
 				6BE69CA62B3C5841007651FA /* APIEndpoint.swift in Sources */,
 				6BE332EE2B6BB67A00CAB181 /* SearchVM.swift in Sources */,
 				6B044A7C2B3C1032002FEE67 /* AppManager.swift in Sources */,
-				6B044A762B3C0F6C002FEE67 /* UIImage+Extentions.swift in Sources */,
 				6BE332CF2B6BA89700CAB181 /* MainHomeView.swift in Sources */,
 				6BE332E72B6BB49C00CAB181 /* UserDefaultsValues.swift in Sources */,
 				6B706CA12B38382F00DAD7A2 /* ContentView.swift in Sources */,
-				6B044A782B3C0F7D002FEE67 /* UIView+Extensions.swift in Sources */,
-				6B044A7A2B3C0F82002FEE67 /* UITabBar+Extensions.swift in Sources */,
 				6BE332D92B6BB17E00CAB181 /* TextFieldStyle.swift in Sources */,
 				6BE69CA22B3C421B007651FA /* networkingtTestView.swift in Sources */,
 				6BE332E22B6BB38A00CAB181 /* LocalizationManager.swift in Sources */,
@@ -510,6 +497,7 @@
 				6B044A732B3C0F16002FEE67 /* AppTapBarView.swift in Sources */,
 				6BE332EB2B6BB64F00CAB181 /* SearchView.swift in Sources */,
 				6B044A892B3C1D49002FEE67 /* Color.swift in Sources */,
+				6BA341C62D7EDE2700584CC0 /* TapItem.swift in Sources */,
 				6BE69CA82B3C6213007651FA /* APIClientProtocol.swift in Sources */,
 				6BC774312B93690800375723 /* UserModel.swift in Sources */,
 				6BE332E02B6BB35100CAB181 /* String+Localization+Extension.swift in Sources */,
@@ -613,7 +601,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -670,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -696,6 +684,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -725,6 +714,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
