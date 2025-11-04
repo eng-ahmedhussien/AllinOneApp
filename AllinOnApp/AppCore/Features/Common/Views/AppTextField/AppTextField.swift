@@ -61,7 +61,7 @@ struct AppTextField<ContentLeading: View, ContentTrailing: View>: View {
                         Text(placeholderText)
                             .foregroundColor(isDisabled ? styleConfig.disabledForegroundColor : styleConfig.placeholderColor)
                     })
-                    .onChange(of: data.text, perform: validate)
+                  //  .onChange(of: data.text, perform: validate)
                 
                 if isSecure {
                     showPasswordButton

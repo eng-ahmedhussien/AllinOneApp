@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+
 enum Language: String {
     
     case arabic = "ar"
@@ -37,23 +38,6 @@ enum Language: String {
             return "ar"
         case .english:
             return  "en"
-        }
-    }
-    
-    var ClinicsLanguage: String {
-        switch self {
-        case .arabic:
-            return "arabic"
-        case .english:
-            return  "english"
-        }
-    }
-    var curaNetworkLanguage: String {
-        switch self {
-        case .arabic:
-            return "ar-EG"
-        case .english:
-            return  "en-US"
         }
     }
 }

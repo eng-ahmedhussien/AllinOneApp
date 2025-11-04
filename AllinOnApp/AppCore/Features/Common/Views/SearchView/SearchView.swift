@@ -18,7 +18,7 @@ struct SearchView: View {
     var body: some View {
         VStack{
             AppTextField(data: $searchVM.searchSuggestionsText,
-                         placeholderText: "Search a product, brands…".localized(),
+                         placeholderText: "Search a product, brands…",
                          leadingView: {Image("MapSearch")})
         }
         .padding(.vertical)

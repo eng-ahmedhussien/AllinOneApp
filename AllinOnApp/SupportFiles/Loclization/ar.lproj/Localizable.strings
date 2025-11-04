@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  AllinOnApp
+
+  Created by ahmed hussien on 27/12/2023.
+  
+*/
+"cartTapBar" = "السلة";
+"categoriesTapBar" = "التصنيفات";
+"servicesTapBar" = "الخدمات";
+"home" = "ارئيسية";
+"offersTapBar" = "العروض";

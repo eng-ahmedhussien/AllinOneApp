@@ -11,14 +11,9 @@ struct TapBarView: View {
     
     @StateObject var appManager = AppManager.shared
     @State var selectTap : TapViewEnum = .home
+    @AppStorage("language")
+       private var language = LocalizationService.shared.language
     init() {
-//        let image = UIImage.gradientImageWithBounds(
-//            bounds: CGRect( x: 0, y: 0, width: UIScreen.main.scale, height: 8),
-//            colors: [
-//                UIColor.clear.cgColor,
-//                UIColor.black.withAlphaComponent(0.1).cgColor
-//            ]
-//        )
         let appearance = UITabBarAppearance()
         appearance.configureWithTransparentBackground()
         appearance.backgroundColor =  UIColor(Color.primary)
@@ -33,12 +28,12 @@ struct TapBarView: View {
             ForEach(TapViewEnum.allCases){ tab in
                 let tabItem = tab.tabItem
                 tab
-                    .tabItem { Label(tabItem.title, image: tabItem.image) }
+                    .tabItem { Label(tabItem.title.localized(language), image: tabItem.image) }
                     .tag(tab)
             }
         }
         .accentColor(Color.gray)
-        .environment(\.locale, .init(identifier: "ar"))
+        //.environment(\.locale, .init(identifier: "ar"))
     }
 }
 

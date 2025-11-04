@@ -10,10 +10,17 @@ import SwiftUI
 enum UserEndpoints {
     case getUsers
     case getUserById(id:String)
+    case signUp(parameters: [String: Any])
 }
 extension UserEndpoints:APIEndpoint{
+//    var baseURL: URL {
+//        return URL(string: "https://dummyapi.io/data/v1/")!
+//        
+//        
+//    }
+    
     var baseURL: URL {
-        return URL(string: "https://dummyapi.io/data/v1/")!
+        return URL(string: "https://procare.runasp.net/api/")!
     }
     
     var path: String {
@@ -22,6 +29,8 @@ extension UserEndpoints:APIEndpoint{
             return "/user"
         case .getUserById(let id):
             return "/user/:\(id)"
+        case .signUp:
+            return "Auth/register"
         }
     }
     
@@ -31,12 +40,15 @@ extension UserEndpoints:APIEndpoint{
             return .get
         case .getUserById:
             return .get
+        case .signUp:
+            return .post
         }
     }
     
     var headers: [String : String]? {
-        return  ["app-id" : "62fb78b30fb89e62ca11c547"]
+        return  ["accept" : "*/*", "Content-Type" : "application/json"]
     }
+    
     
     var parameters: Parameters? {
         switch self {
@@ -44,6 +56,8 @@ extension UserEndpoints:APIEndpoint{
             return .requestNoParameters
         case .getUserById:
             return .requestNoParameters
+        case .signUp(parameters: let parameters):
+            <#code#>
         }
     }
     

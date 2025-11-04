@@ -31,7 +31,8 @@ enum TapViewEnum : Identifiable, CaseIterable, View {
     var body: some View {
         switch self {
         case .shop:
-            Text("shopTapBar")
+          // changelanguage()
+            SettingsView()
         case .offers:
             Text("OffersView")
         case .home:
@@ -48,5 +49,18 @@ enum TapViewEnum : Identifiable, CaseIterable, View {
 
 #Preview {
     TapViewEnum.home.body
+}
+
+struct changelanguage: View {
+    var body: some View {
+        VStack{
+            Text("shopTapBar")
+            Button("Change Language") {
+                if let url = URL(string: UIApplication.openSettingsURLString) {
+                    UIApplication.shared.open(url)
+                }
+            }
+        }
+    }
 }
 
